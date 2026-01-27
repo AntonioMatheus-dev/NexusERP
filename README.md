@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# NexusERP – Micro-ERP Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **NexusERP** é uma solução de micro-ERP web projetada especificamente para pequenas e médias empresas. O foco principal é a automação de rotinas de vendas, controle rigoroso de estoque e uma gestão financeira totalmente integrada, eliminando a dependência de planilhas manuais e processos descentralizados.
 
-## Available Scripts
+## 🚀 Visão Geral
+O sistema centraliza as operações fundamentais do negócio em uma interface intuitiva, permitindo que donos de empresas e gerentes tomem decisões baseadas em dados reais e atualizados instantaneamente.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Principais Funcionalidades (Roadmap)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Autenticação e Segurança
+- Login seguro com validação de senha e recuperação via e-mail (NodeMailer).
+- Estrutura multi-tenant (vários clientes em uma mesma infraestrutura com dados isolados).
+- Controle de permissões: Admin, Vendedor e Financeiro.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Gestão de Produtos e Estoque
+- Cadastro completo com SKU, categorias e preços (custo/venda).
+- **Alerta de Estoque Mínimo**: Notificações automáticas ao atingir limites críticos.
+- Histórico completo de movimentações (entradas, saídas e ajustes).
 
-### `npm test`
+### 3. Gestão de Clientes e Vendas
+- CRM simplificado com histórico de compras por cliente.
+- Registro de vendas rápido com cálculo automático de subtotais e descontos.
+- Atualização automática em tempo real do estoque e do financeiro após cada venda.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Gestão Financeira
+- **Fluxo de Caixa**: Resumo diário, semanal e mensal de entradas e saídas.
+- Contas a Receber e Contas a Pagar integradas.
+- Relatórios consolidados de faturamento e lucro.
 
-### `npm run build`
+### 5. Dashboard e BI
+- Visão em tempo real do faturamento e vendas.
+- Gráficos de desempenho dos últimos 7 dias.
+- Top 5 produtos mais vendidos e alertas de pendências.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💻 Stack Tecnológica (MVP)
+- **Frontend**: React (Interface Responsiva)
+- **Backend**: Node.js / Express
+- **Banco de Dados**: PostgreSQL (com Sequelize ORM)
+- **Comunicação**: WebSockets (Socket.io) para atualizações real-time.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📉 Público-Alvo
+- **Comércio Varejista**: Lojas de roupas, eletrônicos, casa e construção.
+- **Setor de Serviços**: Oficinas, salões de beleza, clínicas.
+- **Pequena Manufatura**: Marcenarias, confecções e fábricas de alimentos.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏁 Roadmap de Desenvolvimento
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Fase 1: MVP (Semanas 1-12)
+- [ ] Autenticação e multi-tenant básico.
+- [ ] Cadastro de produtos, clientes e usuários.
+- [ ] Registro de vendas e atualização de estoque.
+- [ ] Dashboard com métricas principais.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Fase 2: Expansão (Meses 4-6)
+- [ ] Fluxo de caixa completo.
+- [ ] Relatórios em PDF/Excel.
+- [ ] Integração com WhatsApp para alertas.
 
-## Learn More
+### Fase 3: Maturidade (Meses 7+)
+- [ ] Integração com NF-e.
+- [ ] App Mobile (React Native).
+- [ ] Análise de dados preditiva (Sazonalidade).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔒 Segurança e Performance
+- Criptografia de senhas com **bcrypt**.
+- Proteção contra SQL Injection e CSRF.
+- Backups diários automáticos.
+- Carregamento otimizado (Dashboards em < 1s).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Conclusão
+O NexusERP não é apenas um software de controle, mas um parceiro estratégico para a digitalização de pequenos negócios, oferecendo simplicidade onde os grandes ERPs entregam complexidade.
