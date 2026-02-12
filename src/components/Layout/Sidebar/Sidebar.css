@@ -1,0 +1,35 @@
+.dashboard-sidebar {
+  width: 180px;
+  background-color: #cedce4;
+  padding: 20px 0;
+  border-right: 1px solid #b1c1cc;
+  height: calc(100vh - 60px);
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item.active {
+  background: rgba(43, 136, 255, 0.1);
+  border-left: 4px solid #2b88ff;
+}
+
+.nav-item .nav-icon {
+  font-size: 24px;
+}
+
+.nav-arrow {
+  color: #64748b;
+  font-weight: bold;
+}
