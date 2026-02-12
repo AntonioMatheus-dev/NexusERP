@@ -1,72 +1,143 @@
-.login {
-  height: 80px;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--glass-border);
 }
 
-.login-left h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.login-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.login-profile {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 12px;
-  transition: background 0.2s ease;
-}
-
-.login-profile:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.login-info {
+.login-card {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  margin-top: 50px;
 }
 
-.login-name {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-main);
+.title-recovery {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.login-role {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+.desc-recovery {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.login-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid var(--primary);
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  margin-bottom: -15px;
 }
 
-.login-avatar img {
+.logo-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-group {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: #fff;
+}
+
+.input-group input.input-error {
+  border-color: #ef4444;
+}
+
+.input-code {
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-entrar {
+  width: 90%;
+  padding: 12px;
+  background-color: #2b88ff;
+  color: white;
+  border: 1px solid #1a73e8;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 15px;
+  height: 50px;
+}
+
+.btn-entrar:hover {
+  background-color: #1a73e8;
+  color: #ffffff;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.forgot-password {
+  color: #0047ff;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.btn-google {
+  width: 40%;
+  height: 50px;
+  padding: 8px 15px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-google img {
+  width: 10px;
+  height: 10px;
 }
