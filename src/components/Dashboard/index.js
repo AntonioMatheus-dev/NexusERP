@@ -51,7 +51,7 @@ const DashboardContent = () => {
   );
 };
 
-const Dashboard = ({ userEmail, onLogout }) => {
+const Dashboard = ({ onLogout }) => {
   const [activePage, setActivePage] = useState('dashboard');
 
   const renderPage = () => {

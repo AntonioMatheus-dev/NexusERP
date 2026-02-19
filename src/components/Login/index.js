@@ -68,7 +68,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card">
         <div className="logo-container">
-          <img src="/image/NexusERP_1_-removebg-preview 2.png" alt="NexusERP Logo" className="logo-img" />
+          <img src="/image/NexusERP_logo.png" alt="NexusERP Logo" className="logo-img" />
         </div>
         
         {view === 'login' && (
@@ -108,9 +108,9 @@ const Login = () => {
             <button type="submit" className="btn-entrar" disabled={isLoading}>
               {isLoading ? 'ENTRANDO...' : 'ENTRAR'}
             </button>
-            <a href="#" className="forgot-password" onClick={() => { setView('forgot'); setError(''); }}>
+            <button type="button" className="forgot-password-btn" onClick={() => { setView('forgot'); setError(''); }}>
               Esqueci minha senha
-            </a>
+            </button>
 
             <button type="button" className="btn-google">
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
@@ -135,9 +135,9 @@ const Login = () => {
               {success && <span className="success-message">{success}</span>}
             </div>
             <button type="submit" className="btn-entrar">ENVIAR VERIFICAÇÃO</button>
-            <a href="#" className="forgot-password" onClick={() => { setView('login'); setError(''); setSuccess(''); }}>
+            <button type="button" className="forgot-password-btn" onClick={() => { setView('login'); setError(''); setSuccess(''); }}>
               Voltar para o Login
-            </a>
+            </button>
           </form>
         )}
 
@@ -157,9 +157,9 @@ const Login = () => {
               {error && <span className="error-message">{error}</span>}
             </div>
             <button type="submit" className="btn-entrar">VERIFICAR CÓDIGO</button>
-            <a href="#" className="forgot-password" onClick={() => { setView('forgot'); setError(''); setSuccess(''); }}>
+            <button type="button" className="forgot-password-btn" onClick={() => { setView('forgot'); setError(''); setSuccess(''); }}>
               Reenviar e-mail
-            </a>
+            </button>
           </form>
         )}
       </div>
