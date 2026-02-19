@@ -1,0 +1,253 @@
+/* ========== Estoque Page ========== */
+.estoque-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.estoque-content {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  flex: 1;
+}
+
+/* ========== Tabela de Produtos ========== */
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.stock-table thead .th-checkbox {
+  width: 40px;
+}
+
+.stock-table tbody .product-row {
+  transition: background 0.15s ease;
+}
+
+.stock-table tbody .product-row:hover {
+  background: #f1f5f9;
+}
+
+.stock-table tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.product-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2b88ff;
+}
+
+.product-name {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #2b88ff;
+  white-space: nowrap;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px 0 !important;
+  font-style: italic;
+}
+
+/* ========== Botão Novo Produto ========== */
+.btn-new-product {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2b88ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-new-product:hover {
+  background: #1a6fd4;
+  transform: translateY(-1px);
+}
+
+.btn-new-product:active {
+  transform: translateY(0);
+}
+
+/* ========== Footer com Paginação ========== */
+.estoque-footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* ========== Modal ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.25s ease;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h2 {
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0;
+}
+
+.modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.15s ease;
+}
+
+.modal-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modal-form {
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  background: #f8fafc;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2b88ff;
+  box-shadow: 0 0 0 3px rgba(43, 136, 255, 0.15);
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.btn-cancel {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-cancel:hover {
+  background: #f1f5f9;
+}
+
+.btn-save {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #2b88ff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-save:hover {
+  background: #1a6fd4;
+}
+
+/* ========== Animações ========== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
