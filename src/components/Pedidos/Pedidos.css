@@ -1,0 +1,285 @@
+/* ========== Pedidos Page ========== */
+.pedidos-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pedidos-content {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  flex: 1;
+}
+
+/* ========== Filtros ========== */
+.order-filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-input,
+.filter-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  background: #f8fafc;
+  min-width: 180px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #2b88ff;
+  box-shadow: 0 0 0 3px rgba(43, 136, 255, 0.15);
+}
+
+/* ========== Tabela de Pedidos ========== */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.orders-table thead .th-checkbox {
+  width: 40px;
+}
+
+.orders-table tbody .order-row {
+  transition: background 0.15s ease;
+}
+
+.orders-table tbody .order-row:hover {
+  background: #f1f5f9;
+}
+
+.orders-table tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.order-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2b88ff;
+}
+
+.order-client {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.order-client-icon {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.order-total {
+  font-weight: 600;
+  color: #2b88ff;
+  white-space: nowrap;
+}
+
+.order-payment {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ========== Botão Novo Pedido ========== */
+.btn-new-order {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2b88ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-new-order:hover {
+  background: #1a6fd4;
+  transform: translateY(-1px);
+}
+
+.btn-new-order:active {
+  transform: translateY(0);
+}
+
+/* ========== Footer ========== */
+.pedidos-footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* ========== Modal Largo (Novo Pedido) ========== */
+.modal-lg {
+  max-width: 560px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group-grow {
+  flex: 1;
+}
+
+/* ========== Itens do Pedido ========== */
+.order-items-section {
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.section-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.order-item-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.order-item-row input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  background: #f8fafc;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.order-item-row input:focus {
+  outline: none;
+  border-color: #2b88ff;
+  box-shadow: 0 0 0 3px rgba(43, 136, 255, 0.15);
+}
+
+.item-product {
+  flex: 2;
+}
+
+.item-qty {
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.item-price {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.btn-remove-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #fee2e2;
+  color: #ef4444;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.btn-remove-item:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.btn-remove-item:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn-add-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2b88ff;
+  background: rgba(43, 136, 255, 0.08);
+  border: 1px dashed #2b88ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-add-item:hover {
+  background: rgba(43, 136, 255, 0.15);
+}
+
+/* ========== Total ========== */
+.order-total-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 2px solid #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.total-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.total-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b88ff;
+}
